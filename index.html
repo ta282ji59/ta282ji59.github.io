@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>ファイル送信ツール</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile_img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+        }
+        h1,h4{
+            /* text-align: center; */
+            color: white;
+            font-family: sans-serif;
+            /* margin-top: 20px; */
+        }
+        li{
+            color: white;
+            list-style: none;
+            text-decoration: none;
+            padding-left: 10px;
+            float: left;
+        }
+    </style>
+    <link rel="icon" href="profile.jpeg">
+    <title>Tatsuya Tsuji</title>
 </head>
 <body>
-	<h1>ファイル送信ツール</h1>
-	<form>
-		<label for="file">ファイルを選択してください:</label>
-		<input type="file" id="file" name="file"><br><br>
-		<input type="button" value="送信" onclick="sendFile()">
-	</form>
-
-	<script src="script.js"></script>
+    <img src="profile.jpeg" class="profile_img">
+    <h1>Tatsuya &nbsp; Tsuji<br></h1>
+    <h4>University &nbsp; of &nbsp; Aizu</h4>
+    <ul>
+        <li>
+          <a href="https://github.com/todorokitai" aria-label="Github">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+            <a href="mailto:ta282ji@gmail.com" aria-label="Mail"   >
+              <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+    </ul>      
 </body>
 </html>
