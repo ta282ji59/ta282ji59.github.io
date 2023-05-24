@@ -1,83 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="header.css" />
-    <style>
-        main{
-            color: white;
-            font-family: sans-serif;
-            text-align: center;
-            background-color: black;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .profile_img {
-            border-radius: 50%;
-            width: 180px;
-            height: 180px;
-        }
-        
-        main a,main li{
-            color: white;
-            list-style: none;
-            text-decoration: none;
-            padding-left: 10px;
-            float: left;
-        }
-        body{
-            background-color: black;
-            overflow: hidden;
-        }
-        
-    </style>
-    <link rel="icon" href="profile.jpeg">
-    <title>Tatsuya Tsuji</title>
+  <title>支出記録アプリ</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="hamburger-menu">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
-            <div class="menu-content">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="profile.html">Profile</a>
-                    </li>
-                    <li>
-                        <a href="ja/index.html">🇯🇵日本語版サイトへ</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <main>
-        <img src="profile.jpeg" class="profile_img">
-        <h1>Tatsuya &thinsp; Tsuji<br></h1>
-        <h4>〜University &thinsp; of &thinsp; Aizu &thinsp; Student〜</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/todorokitai" aria-label="Github">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:ta282ji@icloud.com" aria-label="Mail"   >
-                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        </ul>
-    </main>
-    
+  <h1>支出記録</h1>
+
+  <form id="expense-form">
+    <label for="expense-name">支出名:</label>
+    <input type="text" id="expense-name" required>
+    <label for="expense-amount">金額:</label>
+    <input type="number" id="expense-amount" required>
+    <button type="submit">追加</button>
+  </form>
+
+  <table id="expense-table">
+    <thead>
+      <tr>
+        <th>支出名</th>
+        <th>金額</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>合計</th>
+        <th id="total-amount">0</th>
+        <th></th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script>
+    // ページが読み込まれたときにローカルストレージからデータを復元
+    window.addEventListener('load', function() {
+      const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+      renderExpenses(expenses);
+      updateTotalAmount(expenses);
+    });
+
+    // 支出フォームの送信イベント
+    document.getElementById('expense-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const expenseName = document.getElementById('expense-name').value;
+      const expenseAmount = parseFloat(document.getElementById('expense-amount').value);
+
+      if (!expenseName || isNaN(expenseAmount)) {
+        alert('支出名と金額を入力してください。');
+        return;
+      }
+
+      const expense = { name: expenseName, amount: expenseAmount };
+      const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+      expenses.push(expense);
+      localStorage.setItem('expenses', JSON.stringify(expenses));
+
+      renderExpenses(expenses);
+      updateTotalAmount(expenses);
+
+      document.getElementById('expense-name').value = '';
+      document.getElementById('expense-amount').value = '';
+    });
+
+    // 支出を表示する関数
+    function renderExpenses(expenses) {
+      const tableBody = document.getElementById('expense-table').getElementsByTagName('tbody')[0];
+      tableBody.innerHTML = '';
+
+      for (let i = 0; i < expenses.length; i++) {
+        const expense = expenses[i];
+        const row = tableBody.insertRow(i);
+        const nameCell = row.insertCell(0);
+        const amountCell = row.insertCell(1);
+        const deleteCell = row.insertCell(2);
+
+        nameCell.textContent = expense.name;
+        amountCell.textContent = expense.amount;
+        deleteCell.innerHTML = '<button onclick="deleteExpense(' + i + ')">削除</button>';
+      }
+    }
+
+    // 合計金額を更新する関数
+    function updateTotalAmount(expenses) {
+      const totalAmountCell = document.getElementById('total-amount');
+            const totalAmountCell = document.getElementById('total-amount');
+      let sum = 0;
+      for (let i = 0; i < expenses.length; i++) {
+        sum += expenses[i].amount;
+      }
+      totalAmountCell.textContent = sum;
+    }
+
+    // 支出を削除する関数
+    function deleteExpense(index) {
+      const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+      expenses.splice(index, 1);
+      localStorage.setItem('expenses', JSON.stringify(expenses));
+
+      renderExpenses(expenses);
+      updateTotalAmount(expenses);
+    }
+  </script>
 </body>
 </html>
+
