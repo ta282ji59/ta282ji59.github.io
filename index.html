@@ -2,82 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="header.css" />
+    <title>&#36795;&#xE0100;達也のプロフィール</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="card.css">
+
+
     <style>
-        main{
-            color: white;
-            font-family: sans-serif;
-            text-align: center;
-            background-color: black;
-            height: 100vh;
-            margin: 0;
+        body{
+            font-family: 'Noto Serif JP', serif;
+        }
+        /* 第一段階のcss */
+        .first_view {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* テキストを画像の下に配置するために追加 */
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color:#F0FFF0;
         }
-        .profile_img {
-            border-radius: 50%;
-            width: 180px;
-            height: 180px;
+        .title_text {
+            font-size: 24px;
+            /* font-weight: bold; */
+            margin-top: 20px;
         }
-        
-        main a,main li{
-            color: white;
-            list-style: none;
-            text-decoration: none;
-            padding-left: 10px;
-            float: left;
+
+        /* 第二段階のCSS */
+        .second_view{
+            height: 300vh;
         }
-        body{
-            background-color: black;
-            overflow: hidden;
+
+        /* 第３段階のCSS */
+        .third_view{
+            height: 150vh;
+            background-color:#F0FFF0;
         }
-        
+
     </style>
-    <link rel="icon" href="profile.jpeg">
-    <title>Tatsuya Tsuji</title>
 </head>
 <body>
-    <header>
-        <div class="hamburger-menu">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
-            <div class="menu-content">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="profile.html">Profile</a>
-                    </li>
-                    <li>
-                        <a href="ja/index.html">🇯🇵日本語版サイトへ</a>
-                    </li>
-                </ul>
+    <div class="first_view">
+        <img src="profile.jpeg" style="border-radius: 50%;" width="200px" height="200px">
+        
+        <div class="title_text">
+            <p>〜&#36795;&#xE0100; 達也のホームページ〜</p>
+            <div style="text-align: center;">
+                <a href="https://github.com/todorokitai"><svg style="color:black;"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                <a href="mailto:ta282ji@icloud.com?body="><svg style="padding-left:20px;color:black;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></a>
             </div>
         </div>
-    </header>
-    <main>
-        <img src="profile.jpeg" class="profile_img">
-        <h1>Tatsuya &thinsp; Tsuji<br></h1>
-        <h4>〜University &thinsp; of &thinsp; Aizu &thinsp; Student〜</h4>
+    </div>
+
+    <div class="second_view">
+        <hr>
+        <h2 style="text-align: center;">Profile</h2>
+        <h3>名前</h3>
+        <p>辻達也</p>
+        <h3>出身</h3>
+        <p>宮城県仙台市</p>
+        <h3>生年月日</h3>
+        <p>2003/02/10</p>
+        <h3>職業</h3>
+        <p>大学生：会津大学コンピュータ理工学部</p>
+        <h3>連絡先</h3>
+        <p>ta282ji@icloud.com</p>
+        <h3>コメント</h3>
+        <p>この度は私のホームページを閲覧していただきありがとうございます。
+        このサイトを通じて私の経歴等を知っていただけると幸いです。</p>
+        <br><br><hr>
+        <!---->
+        <h2 style="text-align: center;">My Ressume</h2>
+        <h3 style="display: inline-block; background-color: rgb(185, 185, 185);">活動　</h3>
+        <h4>ハッカソン(UnityThon)参加</h4>
+        <p>2022年1〜2月</p>
+        <p>会津大学生有志主催のハッカソンに参加。Unityでゲームをチーム開発</p>
+        <a href=" https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/26719/webgl/play.html
+        ">→作品を見る</a>
+
+        <h4>Webアプリケーション開発</h4>
+        <p>2022年/3〜5月</p>
+        <p>当時アルバイトしていた際にJavascriptで開発したWebアプリ。</p>
+        <a href="https://todorokitai.github.io/Main/">→作品を見る</a>
+
+        <h4>Webサイト作成</h4>
+        <p>2023年/6〜7月</p>
+        <p>自身が所属するサークルのサイトを作成。一部GASを使用。</p>
+        <a href="http://web-ext.u-aizu.ac.jp/circles/triathlon/">→作品を見る</a>
+
+        <h4>ポートフォリオ作成</h4>
+        <p>2023年/8月</p>
+        <p>このサイト。インターンや大学での研究、自己記録のために作成</p>
+        
+        <!---->
+        <h3 style="display: inline-block; background-color: rgb(185, 185, 185);">学歴　</h3>
+        <p>2018年/4月</p>
+        <p>仙台高等学校入学</p>
+        <p>2021年/3月</p>
+        <p>仙台高等学校卒業</p>
+        <p>2021年/4月</p>
+        <p>会津大学コンピュータ理工学部入学</p>
+
+    </div>
+
+    <div class="third_view">
+        <hr>
+        <h2 style="text-align: center;">Skill</h2>
+        <h3>プログラミング関連</h3>
+        <img src="https://skillicons.dev/icons?i=html,css,javascript"/>
+        <img src="https://skillicons.dev/icons?i=c,java,python"/>
+        <img src="https://skillicons.dev/icons?i=cs,github,bootstrap"/>
         <ul>
-            <li>
-                <a href="https://github.com/todorokitai" aria-label="Github">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:ta282ji@icloud.com" aria-label="Mail"   >
-                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
+            <li>HTML  (使用歴:3年)</li>
+            <li>CSS  (使用歴:3年)</li>
+            <li>Javascript  (使用歴:3年)</li>
+            <li>GAS  (使用歴:数ヶ月)</li>
+            <li>C  (使用歴:3年)</li>
+            <li>C#  (使用歴:数ヶ月)</li>
+            <li>JAVA  (使用歴:数ヶ月)</li>
+            <li>Python  (使用歴:数ヶ月)</li>
+            <li>Github  (使用歴:2年半)</li>
+            <li>Bootstrap  (使用歴:2年)</li>
         </ul>
-    </main>
+        <h3>資格</h3>
+        <ul>
+            <li>TOEIC:550点(2022年3月)</li>
+            <li>普通自動車免許(AT)</li>
+        </ul>
+
+        <!-- <h3>記事</h3>
+        <ul>
+            <a href="" style="color: black;"><li>塾バイトからの経験</li></a>
+            <a href="" style="color: black;"><li>塾バイトからの経験</li></a>
+            <a href="" style="color: black;"><li>塾バイトからの経験</li></a>
+        </ul> -->
+    </div>
+
+    
     
 </body>
 </html>
