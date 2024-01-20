@@ -91,21 +91,12 @@ main{
 }
 
 
-footer {
 
-    padding: 20px 0;
-    background: #333;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
 
 @media (max-width: 600px) {
 
-    .container,
-    footer {
+    .container{
         padding-left: 10px;
         padding-right: 10px;
     }
