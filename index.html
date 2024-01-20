@@ -320,8 +320,16 @@
     </main>
 
     <footer style="text-align: center;">
-        <p>© 2024 Tatsuya Tsuji</p>
+        <p id="copyright"></p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentYear = new Date().getFullYear();
+            var copyrightElement = document.getElementById('copyright');
+            copyrightElement.textContent = '© ' + currentYear + ' Tatsuya Tsuji';
+        });
+    </script>
+
 </body>
 
 </html>
