@@ -8,9 +8,11 @@
     <meta name="robots" content="noindex">
     <link rel="icon" href="image/profile.jpeg">
     <title>&#36795;&#xE0100;達也のプロフィール</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
 
@@ -23,309 +25,662 @@
     </button>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <p class="navbar-brand"></p>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#profile">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#ressume">My Ressume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skill">Skill</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#other">Other</a>
-                </li>
-
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Tatsuya Tsuji</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skill">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#other">Links</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="first_view">
-        <img src="image/profile.jpeg" style="border-radius: 50%;" width="280px" height="280px">
-
-        <!-- <div class="title_text"> -->
-            <h4 style="font-family: Noto Serif JP, serif;">〜&#36795;&#xE0100; 達也のホームページ〜</h4>
-            <div style="text-align: center;">
-                <a href="https://github.com/ta282ji59" style="color: black;">
-                    <img src="image/github.png" width="45" height="45">&nbsp;
+    <div class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="profile-image-wrapper mb-4">
+                <img src="image/profile.jpeg" class="profile-image" alt="Profile">
+            </div>
+            <h1 class="hero-title mb-3">&#36795;&#xE0100;&nbsp;達也</h1>
+            <p class="hero-subtitle mb-4">SRE Engineer @ Rakuten Group</p>
+            <div class="social-links">
+                <a href="https://github.com/ta282ji59" class="social-icon" target="_blank" rel="noopener">
+                    <img src="image/github.png" width="32" height="32" alt="GitHub">
                 </a>
-
-                <a href="https://qiita.com/ta282ji">
-                    <img src="image/qiita.png" width="45" height="45">&nbsp;
+                <a href="https://qiita.com/ta282ji" class="social-icon" target="_blank" rel="noopener">
+                    <img src="image/qiita.png" width="32" height="32" alt="Qiita">
                 </a>
-
-                <a href="http://web-ext.u-aizu.ac.jp/circles/triathlon/">
-                    <img src="https://web-ext.u-aizu.ac.jp/circles/triathlon/image/image.png" width="45" height="45">
+                <!-- <a href="http://web-ext.u-aizu.ac.jp/circles/triathlon/" class="social-icon" target="_blank" rel="noopener">
+                    <img src="image/triathlon.png" width="32" height="32" alt="Triathlon">
+                </a> -->
+            </div>
+            <div class="scroll-indicator mt-5">
+                <a href="#profile" class="text-white">
+                    <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
                 </a>
-
             </div>
         </div>
     </div>
     <main>
-        <div class="second_view">
-            <hr>
-            <h2 style="text-align: left;" id="profile">Profile</h2>
-            <h3>名前</h3>
-            <p>&#36795;&#xE0100; 達也</p>
+        <!-- Profile Section -->
+        <section class="section-padding" id="profile">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Profile</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4>名前</h4>
+                            <p>辻 達也</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>出身</h4>
+                            <p>宮城県仙台市</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <h4>生年月日</h4>
+                            <p>2003/02/10</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4>職業</h4>
+                            <p>楽天グループ株式会社<br>SREエンジニア</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>連絡先</h4>
+                            <p>ta282ji@icloud.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>保有資格</h4>
+                            <ul class="mb-0">
+                                <li>TOEIC:805点</li>
+                                <li>基本情報技術者試験</li>
+                                <li>普通自動車免許(AT)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <h4>コメント</h4>
+                            <p class="mb-0">この度は私のホームページを閲覧していただきありがとうございます。このサイトを通じて私の経歴等を知っていただけると幸いです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h3>出身</h3>
-            <p>宮城県仙台市</p>
+        <!-- Resume Section -->
+        <section class="section-padding bg-light" id="resume">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Resume</h2>
 
-            <h3>生年月日</h3>
-            <p>2003/02/10</p>
+                <h3 class="category-title mb-4">
+                    <i class="fas fa-rocket me-2"></i>活動
+                </h3>
 
-            <h3>職業</h3>
-            <p>大学生：会津大学コンピュータ理工学部3年</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年5月</div>
+                            <h4>日本地球惑星科学連合2025年大会（JPGU2025）参加</h4>
+                            <p>学生時代の卒論に関してのポスターセッションを発表</p>
+                            <a href="https://www.jpgu.org/meeting_j2025/" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>大会公式サイト
+                            </a>
+                            <a href="https://docs.google.com/presentation/d/1RGu7H-SBO1YbErQsVY7vTPJqMPiUTpIYjV9zXmdd2QU/edit?usp=sharing" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>記事を見る
+                            </a>
+                        </div>
+                    </div>
 
-            <h3>連絡先</h3>
-            <p>s1290242@u-aizu.ac.jp</p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年12月〜2024年2月</div>
+                            <h4>ダイアモンドヘッド株式会社長期インターン参加</h4>
+                            <p>アパレル業界に特化したECシステム、WEB制作を行っている企業にオンライン・現地でインターンに参加中</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">Django</span>
+                                <span class="badge bg-dark">Python</span>
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">Javascript</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <h3>保有資格</h3>
-            <ul>
-                <li>TOEIC:580点(2023年3月)</li>
-                <li>普通自動車免許(AT)</li>
-            </ul>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年10月〜2024年3月</div>
+                            <h4>アオタケプロジェクト</h4>
+                            <p>会津地方と秋田地方を中心としたスタートアップを目指す若手人材の発掘と支援を行うプロジェクトに参加中</p>
+                            <a href="https://aizu-startups-foundation.com/aotake/top/" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>参考リンク
+                            </a>
+                        </div>
+                    </div>
 
-            <h3>コメント</h3>
-            <p>この度は私のホームページを閲覧していただきありがとうございます。
-                このサイトを通じて私の経歴等を知っていただけると幸いです。
-            </p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年10月</div>
+                            <h4>メールbot開発</h4>
+                            <p>自身が所属するサークルの練習メニュー等の定期連絡をするメール送信業務の自動化システムを開発</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">Google Apps Script</span>
+                            </div>
+                            <a href="https://qiita.com/ta282ji/items/a2d4612a435dac79e637" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>記事を見る
+                            </a>
+                        </div>
+                    </div>
 
-            <br><br>
-            <hr>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年8月</div>
+                            <h4>会津大学コンピュータサマーキャンプスタッフ参加</h4>
+                            <p>キャンプに参加した高校生にゲーム開発を通してプログラミングを教えた。</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-dark">Javascript</span>
+                            </div>
+                            <a href="http://www.aizunpo.or.jp/cssc/staff.html" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>参考リンク
+                            </a>
+                        </div>
+                    </div>
 
-            <!---->
-            <h2 style="text-align: left;" id="ressume">My Ressume</h2>
-            <h3 style="display: inline-block; background-color: rgb(185, 185, 185);">&nbsp;活動&nbsp;</h3>
-            <strong>
-                <h4>ハッカソン参加</h4>
-            </strong>
-            <p>2022年1〜2月</p>
-            <p>会津大学生有志主催のハッカソンに参加。Unityでゲームをチーム開発</p>
-            <a href=" https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/26719/webgl/play.html
-        " class="btn btn-primary">作品を見る<i class="fas fa-link"></i> </a>
-            <a href="https://qiita.com/ta282ji/items/65449a13366ec5b2d72b" class="btn btn-warning">記事を見る<i class="fas fa-link"></i> </a>
-            <a href="https://x.com/aizu_ascs/status/1486956301359857664?s=20" class="btn btn-success">参考リンク<i class="fas fa-link"></i> </a>
-            <br>
-            <p class="btn btn-outline-dark disabled"># Unity</p>
-            <br><br>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年8月</div>
+                            <h4>ポートフォリオ作成</h4>
+                            <p>このサイト。インターンや大学での研究、自己記録のために作成</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-dark">Javascript</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <strong>
-                <h4>塾バイト</h4>
-            </strong>
-            <p>2022年/1月〜</p>
-            <p>某塾で講師バイトを始める。小中学生(全科目)・高校生(数学、英語、化学)を指導
-            </p>
-            <a href="https://www.kobekyo.com/around/fukushima/aizutsurugajo/" class="btn btn-success">参考リンク<i class="fas fa-link"></i> </a>
-            <p>※参考リンクのサイトから私の内容が削除されている可能性があります</p>
-            <br><br>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年6〜7月、2024年1月(一部機能追加)</div>
+                            <h4>サークル用Webサイト作成</h4>
+                            <p>自身が所属するサークルのサイトを作成。</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-dark">Javascript</span>
+                                <span class="badge bg-dark">Google Apps Script</span>
+                            </div>
+                            <a href="http://web-ext.u-aizu.ac.jp/circles/triathlon/" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>作品を見る
+                            </a>
+                            <a href="https://qiita.com/ta282ji/items/a2d4612a435dac79e637" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>記事を見る
+                            </a>
+                        </div>
+                    </div>
 
-            <strong>
-                <h4>Webアプリケーション開発</h4>
-            </strong>
-            <p>2022年/3〜5月</p>
-            <p>当時アルバイトしていた際にJavascriptで開発したWebアプリ。</p>
-            <a href="https://ta282ji59.github.io/Cram-school-part-time-job/" class="btn btn-primary">作品を見る<i class="fas fa-link"></i> </a>
-            <br>
-            <p class="btn btn-outline-dark disabled"># html</p>
-            <p class="btn btn-outline-dark disabled"># css</p>
-            <p class="btn btn-outline-dark disabled"># Javascript</p>
-            <!-- <a href="" class="btn btn-warning">記事見る<i class="fas fa-link"></i> </a> -->
-            <br><br>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023年4月〜2025年2月</div>
+                            <h4>就学支援室アルバイト</h4>
+                            <p>大学内にある学生の学習支援を行うバイトに勤務中</p>
+                            <a href="https://u-aizu.ac.jp/campus/support/learningsupport/" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>参考リンク
+                            </a>
+                        </div>
+                    </div>
 
-            <strong>
-                <h4>就学支援室アルバイト</h4>
-            </strong>
-            <p>2023年/4月〜</p>
-            <p>大学内にある学生の学習支援を行うバイトに勤務中</p>
-            <a href="https://u-aizu.ac.jp/campus/support/learningsupport/" class="btn btn-success">参考リンク<i class="fas fa-link"></i> </a>
-            <br><br>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022年3〜5月</div>
+                            <h4>初個人開発</h4>
+                            <p>当時アルバイトしていた際にJavascriptで開発したWebアプリ。</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-dark">Javascript</span>
+                            </div>
+                            <a href="https://ta282ji59.github.io/Cram-school-part-time-job/" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>作品を見る
+                            </a>
+                        </div>
+                    </div>
 
-            <strong>
-                <h4>サークル用Webサイト作成</h4>
-            </strong>
-            <p>2023年/6〜7月、2024年1月(一部機能追加)</p>
-            <p>自身が所属するサークルのサイトを作成。</p>
-            <a href="http://web-ext.u-aizu.ac.jp/circles/triathlon/" class="btn btn-primary">作品を見る<i class="fas fa-link"></i> </a>
-            <!-- <a href="" class="btn btn-warning">記事を見る<i class="fas fa-link"></i> </a> -->
-            <br>
-            <p class="btn btn-outline-dark disabled"># html</p>
-            <p class="btn btn-outline-dark disabled"># css</p>
-            <p class="btn btn-outline-dark disabled"># Javascript</p>
-            <p class="btn btn-outline-dark disabled"># Google Apps Script</p>
-            <br><br>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022年1〜2月</div>
+                            <h4>ハッカソン参加</h4>
+                            <p>会津大学生有志主催のハッカソンに参加。Unityでゲームをチーム開発</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-dark">Unity</span>
+                            </div>
+                            <a href="https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/26719/webgl/play.html" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>作品を見る
+                            </a>
+                            <a href="https://qiita.com/ta282ji/items/65449a13366ec5b2d72b" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>記事を見る
+                            </a>
+                            <a href="https://x.com/aizu_ascs/status/1486956301359857664?s=20" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>参考リンク
+                            </a>
+                        </div>
+                    </div>
 
-            <strong>
-                <h4>ポートフォリオ作成</h4>
-            </strong>
-            <p>2023年/8月</p>
-            <p>このサイト。インターンや大学での研究、自己記録のために作成</p>
-            <br>
-            <p class="btn btn-outline-dark disabled"># html</p>
-            <p class="btn btn-outline-dark disabled"># css</p>
-            <p class="btn btn-outline-dark disabled"># Javascript</p>
-            <br><br>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022年1月〜</div>
+                            <h4>塾バイト</h4>
+                            <p>某塾で講師バイトを始める。小中学生(全科目)・高校生(数学、英語、化学)を指導</p>
+                            <a href="https://www.kobekyo.com/around/fukushima/aizutsurugajo/" class="btn btn-sm btn-outline-primary" target="_blank">
+                                <i class="fas fa-link me-1"></i>参考リンク
+                            </a>
+                            <p class="text-muted small mt-2">※2026/03/19に確認してみたらもうなかったです、、、）</p>
+                        </div>
+                    </div>
+                </div>
 
-            <strong>
-                <h4>会津大学コンピュータサマーキャンプスタッフ参加</h4>
-            </strong>
-            <p>2023年/8月</p>
-            <p>キャンプに参加した高校生にゲーム開発を通してプログラミングを教えた。</p>
-            <a href="http://www.aizunpo.or.jp/cssc/staff.html" class="btn btn-success">参考リンク<i class="fas fa-link"></i> </a>
-            <br>
-            <p class="btn btn-outline-dark disabled"># html</p>
-            <p class="btn btn-outline-dark disabled"># css</p>
-            <p class="btn btn-outline-dark disabled"># Javascript</p>
-            <br><br>
+                <h3 class="category-title mb-4 mt-5">
+                    <i class="fas fa-graduation-cap me-2"></i>学歴
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年3月</div>
+                            <h4>会津大学コンピュータ理工学部卒業</h4>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021年4月</div>
+                            <h4>会津大学コンピュータ理工学部入学</h4>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021年3月</div>
+                            <h4>仙台高等学校卒業</h4>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2018年4月</div>
+                            <h4>仙台高等学校入学</h4>
+                        </div>
+                    </div>
+                </div>
 
-            <strong>
-                <h4>メールbot開発</h4>
-            </strong>
-            <p>2023年/10月</p>
-            <p>自身が所属するサークルの練習メニュー等の定期連絡をするメール送信業務の自動化システムを開発</p>
-            <a href="https://qiita.com/ta282ji/items/a2d4612a435dac79e637" class="btn btn-warning">記事を見る<i class="fas fa-link"></i> </a>
-            <br>
-            <p class="btn btn-outline-dark disabled"># Google Apps Script</p>
-            <br><br>
+                <h3 class="category-title mb-4 mt-5">
+                    <i class="fas fa-building me-2"></i>職歴
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年4月</div>
+                            <h4>楽天グループ株式会社入社</h4>
+                            <p>SREエンジニア</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <strong>
-                <h4>アオタケプロジェクト</h4>
-            </strong>
-            <p>2023年/10月〜</p>
-            <p>会津地方と秋田地方を中心としたスタートアップを目指す若手人材の発掘と支援を行うプロジェクトに参加中</p>
-            <a href="https://aizu-startups-foundation.com/aotake/top/" class="btn btn-success">参考リンク<i class="fas fa-link"></i> </a>
-            <br><br>
+        <!-- Skills Section -->
+        <section class="section-padding" id="skill">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Skills</h2>
 
-            <strong>
-                <h4>ダイアモンドヘッド株式会社長期インターン参加</h4>
-            </strong>
-            <p>2023年/12月〜</p>
-            <p>アパレル業界に特化したECシステム、WEB制作を行っている企業にオンライン・現地でインターンに参加中</p>
-            <br>
-            <p class="btn btn-outline-dark disabled"># Django</p>
-            <p class="btn btn-outline-dark disabled"># Python</p>
-            <p class="btn btn-outline-dark disabled"># html</p>
-            <p class="btn btn-outline-dark disabled"># Javascript</p>
-            <br><br>
+                <!-- 言語 -->
+                <h3 class="category-title mb-3">
+                    <i class="fas fa-code me-2"></i>言語
+                </h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">5年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">5年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>Javascript</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">5年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <h4>Shell</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">5年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>C</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">4年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">3年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h4>Java</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">2年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>TypeScript</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">1年半</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <h4>C#</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">数ヶ月</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <!---->
-            <h3 style="display: inline-block; background-color: rgb(185, 185, 185);">&nbsp;学歴&nbsp;</h3>
-            <p>2018年/4月</p>
-            <p>仙台高等学校入学</p>
-            <p>2021年/3月</p>
-            <p>仙台高等学校卒業</p>
-            <p>2021年/4月</p>
-            <p>会津大学コンピュータ理工学部入学</p>
+                <!-- フレームワーク -->
+                <h3 class="category-title mb-3">
+                    <i class="fas fa-cubes me-2"></i>フレームワーク
+                </h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <h4>Google Apps Script</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">3年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <h4>Bootstrap</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">3年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Django</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">2年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Spring</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">半年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">半年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-unity"></i>
+                            </div>
+                            <h4>Unity</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">数ヶ月</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
+                <!-- データベース -->
+                <h3 class="category-title mb-3">
+                    <i class="fas fa-database me-2"></i>データベース
+                </h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>Oracle</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">1年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>PostgreSQL</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">1年</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="third_view">
-            <hr>
-            <h2 style="text-align: left;" id="skill">Skill</h2>
-            <h3>プログラミング関連</h3>
-            <!-- <img src="https://skillicons.dev/icons?i=html,css,javascript" />
-            <img src="https://skillicons.dev/icons?i=c,java,python" />
-            <img src="https://skillicons.dev/icons?i=cs,github,bootstrap,unity,django" /> -->
-            <table border="1" style="text-align: center;">
-                <tr>
-                    <th>技術</th>
-                    <th>使用歴</th>
-                    <th>用途</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>3年</td>
-                    <td>ウェブ製作</td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td>3年</td>
-                    <td>ウェブ製作</td>
-                </tr>
-                <tr>
-                    <td>Javascript</td>
-                    <td>3年</td>
-                    <td>ウェブ製作</td>
-                </tr>
-                <tr>
-                    <td>Gas</td>
-                    <td>1年</td>
-                    <td>ウェブ製作、メールbot、JSON制作</td>
-                </tr>
-                <tr>
-                    <td>C</td>
-                    <td>3年</td>
-                    <td>AtCoder</td>
-                </tr>
-                <tr>
-                    <td>C#</td>
-                    <td>数ヶ月</td>
-                    <td>ハッカソンのゲーム作成で使用</td>
-                </tr>
-                <tr>
-                    <td>JAVA</td>
-                    <td>数ヶ月</td>
-                    <td>大学の授業で使用</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                    <td>数ヶ月</td>
-                    <td>大学の授業で使用</td>
-                </tr>
-                <tr>
-                    <td>Django</td>
-                    <td>数ヶ月</td>
-                    <td>インターン</td>
-                </tr>
-                <tr>
-                    <td>Github</td>
-                    <td>3年</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Bootstrap</td>
-                    <td>3年</td>
-                    <td></td>
-                </tr>
+                <!-- リリースツール -->
+                <h3 class="category-title mb-3">
+                    <i class="fas fa-rocket me-2"></i>リリースツール
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4>Github</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">5年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <h4>Docker</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">2年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>Jenkins</h4>
+                            <div class="skill-info">
+                                <span class="badge bg-primary">半年</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </table>
-
-            <ul>
-
-            </ul>
-            
-            <hr>
-            <h3 id="other">記事</h3>
-            <a href="https://qiita.com/ta282ji">
-                Qiita<i class="fas fa-link"></i>
-            </a>
-            <p>→上記に書いたような成果物に関する記事を書いています。</p>
-            <br><br>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
+        <!-- Links Section -->
+        <section class="section-padding bg-light" id="other">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Links</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="link-card">
+                            <div class="link-icon">
+                                <img src="image/qiita.png" width="60" height="60" alt="Qiita">
+                            </div>
+                            <h4>Qiita</h4>
+                            <p>成果物に関する記事を書いています</p>
+                            <a href="https://qiita.com/ta282ji" class="btn btn-primary" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt me-2"></i>Qiitaを見る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer style="text-align: center;">
-        <p id="copyright"></p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-0" id="copyright"></p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var currentYear = new Date().getFullYear();
-            var copyrightElement = document.getElementById('copyright');
+            const currentYear = new Date().getFullYear();
+            const copyrightElement = document.getElementById('copyright');
             copyrightElement.textContent = '© ' + currentYear + ' Tatsuya Tsuji';
         });
     </script>
